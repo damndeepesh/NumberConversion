@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number System Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://img.freepik.com/premium-psd/abstract-colorful-gradient-background-psd-modern-windows-desktop-wallpaper-4k-panoramic-size-2022_691560-34.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: none;
+    }
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #fff;
+    }
+    .btn-primary {
+      background-color: #dd1818;
+      border-color: #dd1818;
+    }
+    .btn-primary:hover {
+      background-color: #b00f0f;
+      border-color: #b00f0f;
+    }
+    .title {
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 576px) {
+      .container {
+        padding: 10px;
+      }
+      .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 768px) {
+      .container {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Number System Converter</h1>
+    <form action="/convert" method="post">
+      <div class="form-group">
+        <label for="inputValue">Value:</label>
+        <input type="text" class="form-control" name="input_value" placeholder="Enter value">
+      </div>
+      <div class="form-group">
+        <label for="fromUnit">From:</label>
+        <select name="input_type" class="form-control" id="fromUnit">
+          <option>Binary</option>
+          <option>Decimal</option>
+          <option>Hexadecimal</option>
+          <option>Octal</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="toUnit">To:</label>
+        <select name="output_type" class="form-control" id="toUnit">
+          <option>Binary</option>
+          <option>Decimal</option>
+          <option>Hexadecimal</option>
+          <option>Octal</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Convert</button>
+    </form>
+
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
